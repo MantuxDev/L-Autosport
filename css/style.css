@@ -1,0 +1,40 @@
+:root{
+    --primary-color:#0337bb;
+    --secondary-color:#FF6B2B;
+    --white-color:#fff;
+    --black-color:#000;
+
+    --primary-color-hover:rgba(3, 55, 187, 0.6);
+    --white-color-hover:rgba(255, 255, 255, 0.2);
+
+    --gray-1: #f5f5f5;
+
+    /*Radius sito*/
+    --radius-btn1: 15px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Barlow', sans-serif;
+    font-weight: 500;
+}
+
+main{
+    margin-top: 88px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+section{
+    padding: 60px 20px;
+    min-height: 100vh;
+}

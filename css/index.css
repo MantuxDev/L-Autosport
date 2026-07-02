@@ -1,0 +1,361 @@
+.hero {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: #000000;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 0;
+}
+
+.hero video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.7;
+}
+
+.hero-content h1{
+    font-size: 80px;
+    margin-bottom: 20px;
+    color: var(--white-color);
+}
+
+.hero-content h1 span {
+    position: relative;
+    color: var(--white-color);
+}
+
+.hero-content h1 span::after {  /* ::after diretto su span, non con spazio */
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 8px;
+    background-color: var(--primary-color);
+    animation: lineaGrow 0.8s ease-out 0.5s forwards;
+}
+
+@keyframes lineaGrow {
+    to { width: 100%; }
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: var(--gray-1);
+    max-width: 1200px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn-primary span,
+.btn-secondary span {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    font-size: 20px;
+    margin-right: 8px;    /* spazio tra icona e testo */
+}
+
+.btn-primary, .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: var(--radius-btn1);
+    transition: background-color 0.3s ease;
+    border: 2px solid var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color-hover);
+    backdrop-filter: blur(4px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--white-color);
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 600;
+    text-decoration: underline;
+    transition: background-color 0.3s ease;
+    border-radius: var(--radius-btn1);
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px){
+    .hero-content h1{
+        font-size: 50px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+        max-width: 600px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;   /* ← fix: evita lo stretch dei bottoni */
+    }
+
+    .btn-primary, .btn-secondary {
+        display: inline-flex;
+        align-items: center;
+    }
+}
+
+.trustBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    min-height: 5vh;
+    background-color: var(--white-color);
+}
+
+.trustBar img {
+    width: 90px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.trustBar img:first-child {
+    width: 150px;
+}
+
+.trustBar img:hover {
+    filter: grayscale(0%);
+}
+
+.Categorie {
+    padding: 80px 60px 80px;
+    overflow: hidden;           /* fondamentale: nasconde le card fuori viewport */
+}
+
+/* Header: titolo + frecce affiancati */
+.categorie-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 48px;
+}
+
+/* ── H2 design ── */
+.categorie-header h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 1;
+    text-transform: uppercase;
+    color: var(--dark-color);   /* colore scuro principale del tuo progetto */
+    letter-spacing: -1px;
+}
+
+/* "Esplora" — blocchetto arancione sopra */
+.h2-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--white-color);
+    background-color: var(--primary-color);  /* arancione */
+    padding: 4px 12px;
+    margin-bottom: 8px;
+    width: fit-content;
+}
+
+/* "categorie" — corsivo blu di accento */
+.categorie-header h2 em {
+    font-style: italic;
+    color: var(--secondary-color);   /* blu #273BE2 */
+}
+
+/* ── Bottoni freccia ── */
+.carousel-controls {
+    display: flex;
+    gap: 12px;
+    padding-bottom: 8px;    /* allineamento ottico con la baseline del titolo */
+}
+
+.carousel-btn {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 2px solid currentColor;
+    background: transparent;
+    color: var(--dark-color);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+
+.carousel-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-color: var(--primary-color);
+    transform: scale(1.08);
+}
+
+.carousel-btn .material-symbols-outlined {
+    font-size: 22px;
+}
+
+/* ── Carosello ── */
+.carousel-viewport {
+    padding-top: 24px;   /* spazio sotto per evitare che le card tocchino il bordo */
+    overflow: hidden;           /* nasconde ciò che esce dal bordo */
+}
+
+.carousel-track {
+    display: flex;
+    gap: 24px;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+}
+
+/* ── Card ── */
+.cardCat {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    min-width: 320px;
+    height: 500px;
+    cursor: pointer;
+    flex-shrink: 0;             /* le card non si comprimono */
+
+    transition: transform 0.3s ease;
+}
+
+.cardCat:hover {
+    transform: translateY(-8px);
+}
+
+/* Gradiente interno per leggibilità del testo */
+.cardCat-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.75) 0%,
+        rgba(0,0,0,0.1) 50%,
+        transparent 100%
+    );
+    z-index: 0;
+}
+
+.cardCat h3 {
+    font-size: 36px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--white-color);
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    z-index: 1;
+}
+
+/* Immagini di sfondo — stesso selettore nth-child di prima */
+.Categorie .cardCat:nth-child(1) {
+    background-image: url('../img/Categorie/Outlet_.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.Categorie .cardCat:nth-child(2) {
+    background-image: url('../img/Categorie/motosport.png');
+    background-size: cover;
+    background-position: center;
+}
+.Categorie .cardCat:nth-child(3) {
+    background-image: url('../img/Categorie/teamwork.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.Categorie .cardCat:nth-child(4) {
+    background-image: url('../img/Categorie/collezioni.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.Categorie .cardCat:nth-child(5) {
+    background-image: url('../img/Categorie/lifestyle.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.Categorie .cardCat:nth-child(6) {
+    background-image: url('../img/Categorie/gaming.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* wrapper che contiene frecce + viewport */
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.carousel-btn {
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    cursor: pointer;
+    padding: 8px;
+    color: var(--primary-color);                        /* grigio neutro di default */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: color 0.25s ease, transform 0.2s ease;
+}
+
+.carousel-btn span:hover {
+    color: var(--white-color);        /* arancione al hover */
+}
+
+.carousel-btn .material-symbols-outlined {
+    font-size: 36px;
+    color: var(--primary-color);
+}

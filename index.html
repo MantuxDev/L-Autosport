@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Meta Description -->
+    <title>Autosport S.r.l. | Shop di Accessori Racing e Tuning</title>
+    <link rel="icon" type="image/x-icon" href="img/logo/logo.ico" >
+
+    <meta name="author" content="Raffaele Pio Mantuano">
+    <meta name="description" content="Autosport S.r.l. è il tuo negozio di fiducia per accessori racing e tuning. Scopri la nostra vasta gamma di prodotti per migliorare le prestazioni della tua auto. Acquista online o visita il nostro negozio a Lucera.">
+
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Autosport S.r.l. | Shop di Accessori Racing e Tuning">
+    <meta property="og:description" content="Autosport S.r.l. è il tuo negozio di fiducia per accessori racing e tuning. Scopri la nostra vasta gamma di prodotti per migliorare le prestazioni della tua auto. Acquista online o visita il nostro negozio a Lucera.">
+    <meta property="og:type" content="website">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/navbar.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" /> <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
+
+</head>
+<body>
+    
+    <!--header-->
+    <header>
+
+        <button class="hamburger" id="hamburger" aria-label="Apri il menù">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo/logo White.png" alt="L'Autosport S.r.l. logo">
+            </a>
+        </div>
+
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">Chi siamo</a></li>
+                <li><a href="contact.html">Contattaci</a></li>
+            </ul>
+        </nav>
+
+        <div class="azioni">
+            <a href="#">
+                <span class="material-symbols-outlined">search</span>
+            </a>
+
+            <a href="#">
+                <span class="material-symbols-outlined">shopping_cart</span>
+            </a>
+        </div>
+
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Oltre 50 anni di motorsport. <br>La qualità che i campioni <span>scelgono</span>.</h1>
+                <p>Il tuo negozio di fiducia per accessori racing e tuning. <br> Acquista online o visita il nostro negozio a Lucera.</p>
+                <div class="buttons">
+                    <a href="shop.html" class="btn-primary"><span class="material-symbols-outlined">shopping_cart</span>Acquista ora</a>
+                    <a href="about.html" class="btn-secondary"><span class="material-symbols-outlined">info</span>Scopri di più</a>
+                </div>
+            </div>
+
+            
+            <video src="vid/13866390-uhd_3840_2160_30fps.mp4" autoplay muted loop>
+                Il tuo browser non supporta il tag video.
+            </video>
+
+            <div class="overlay"></div>
+        </section>
+
+
+
+        <!-- Trust Bar-->
+        <section class="trustBar">
+            <img src="img/marchi/sparco.png" alt="Sparco Logo">
+            <img src="img/marchi/omp.png" alt="OMP Logo">
+            <!--
+            <img src="img/marchi/stilo.png" alt="Stilo Logo">
+            <img src="img/marchi/alpine.png" alt="Alpine Stars Logo">
+            -->
+        </section>
+
+    <!-- Categorie -->
+    <section class="Categorie">
+
+        <div class="categorie-header">
+            <h2><span class="h2-label">Esplora</span> le nostre <em>categorie</em></h2>
+        </div>
+
+        <div class="carousel-wrapper">
+
+            <button class="carousel-btn" id="prevBtn" aria-label="Precedente">
+                <span class="material-symbols-outlined">arrow_back</span>
+            </button>
+
+            <div class="carousel-viewport">
+                <div class="carousel-track" id="carouselTrack">
+
+                    <div class="cardCat" onclick="window.location.href='shop.html?categoria=outlet'">
+                        <div class="cardCat-overlay"></div>
+                        <h3>Outlet</h3>
+                    </div>
+                    <div class="cardCat" onclick="window.location.href='shop.html?categoria=motosport'">
+                        <div class="cardCat-overlay"></div>
+                        <h3>Motosport</h3>
+                    </div>
+                    <div class="cardCat" onclick="window.location.href='shop.html?categoria=teamwork'">
+                        <div class="cardCat-overlay"></div>
+                        <h3>Teamwork</h3>
+                    </div>
+                    <div class="cardCat" onclick="window.location.href='shop.html?categoria=collezioni'">
+                        <div class="cardCat-overlay"></div>
+                        <h3>Collezioni</h3>
+                    </div>
+                    <div class="cardCat" onclick="window.location.href='shop.html?categoria=lifestyle'">
+                        <div class="cardCat-overlay"></div>
+                        <h3>Lifestyle</h3>
+                    </div>
+                    <div class="cardCat" onclick="window.location.href='shop.html?categoria=gaming'">
+                        <div class="cardCat-overlay"></div>
+                        <h3>Gaming</h3>
+                    </div>
+
+                </div>
+            </div>
+
+            <button class="carousel-btn" id="nextBtn" aria-label="Successivo">
+                <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+
+        </div>
+
+    </section>
+    </main>
+
+    <script src="js/caroselloCat.js"></script>
+    <script src="js/navbar.js"></script>
+</body>
+</html>
