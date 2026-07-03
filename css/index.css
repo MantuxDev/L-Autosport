@@ -171,6 +171,80 @@
     filter: grayscale(0%);
 }
 
+.trustBar {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 5vh;
+    background-color: var(--white-color);
+}
+
+.trustBar-track {
+    display: flex;
+    align-items: center;
+    gap: 150px;
+}
+
+.trustBar-duplicate {
+    display: none; /* nascosto su desktop */
+}
+
+.trustBar-track img {
+    width: 90px;
+    flex-shrink: 0;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.trustBar-track > img:first-child {
+    width: 150px;
+}
+
+.trustBar-track img:hover {
+    filter: grayscale(0%);
+}
+
+@media (max-width: 768px) {
+    .trustBar {
+        justify-content: flex-start;
+    }
+
+    .trustBar-duplicate {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        flex-shrink: 0;
+    }
+
+    .trustBar-track {
+        gap: 60px;
+        width: max-content;
+        animation: scrollMarquee 15s linear infinite;
+    }
+
+    .trustBar-track img {
+        width: 60px;
+    }
+
+    .trustBar-track > img:first-child,
+    .trustBar-duplicate img:first-child {
+        width: 100px;
+    }
+}
+
+@keyframes scrollMarquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .trustBar-track {
+        animation: none;
+    }
+}
+
 .Categorie {
     padding: 80px 60px 80px;
     overflow: hidden;           /* fondamentale: nasconde le card fuori viewport */

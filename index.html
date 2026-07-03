@@ -84,7 +84,7 @@
             </div>
 
             
-            <video src="vid/hero.mp4"  poster="img/cover.png" autoplay muted loop>
+            <video src="vid/hero.mp4" poster="img/cover.png" preload="auto" autoplay muted loop>
                 Il tuo browser non supporta il tag video.
             </video>
 
@@ -95,12 +95,20 @@
 
         <!-- Trust Bar-->
         <section class="trustBar">
-            <img src="img/marchi/sparco.png" alt="Sparco Logo">
-            <img src="img/marchi/omp.png" alt="OMP Logo">
-            <!--
-            <img src="img/marchi/stilo.png" alt="Stilo Logo">
-            <img src="img/marchi/alpine.png" alt="Alpine Stars Logo">
-            -->
+            <div class="trustBar-track">
+                <img src="img/marchi/sparco.png" alt="Sparco Logo">
+                <img src="img/marchi/omp.png" alt="OMP Logo">
+                <img src="img/marchi/Stilo.png" alt="Stilo Logo">
+                <img src="img/marchi/alpine.png" alt="Alpine Stars Logo">
+
+                <!-- Duplicati track-->
+                <div class="trustBar-duplicate" aria-hidden="true">
+                    <img src="img/marchi/sparco.png" alt="Sparco Logo" >
+                    <img src="img/marchi/omp.png" alt="OMP Logo">
+                    <img src="img/marchi/Stilo.png" alt="Stilo Logo">
+                    <img src="img/marchi/alpine.png" alt="Alpine Stars Logo">
+                </div>
+            </div>
         </section>
 
     <!-- Categorie -->
