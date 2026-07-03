@@ -63,9 +63,18 @@ nav ul li a:hover::after {
     margin-right: 50px;
 }
 
-.azioni a{
-    text-decoration: none;
-    gap: 40px;
+.azioni a {
+    color: var(--white-color);
+    display: inline-flex;
+    align-items: center;
+}
+
+.azioni i {
+    font-size: 26px;
+}
+
+.azioni i:first-child{
+    margin-right: 10px;
 }
 
 /* Hamburger: nascosto da desktop */
@@ -79,7 +88,7 @@ nav ul li a:hover::after {
     border: none;
     cursor: pointer;
     margin-left: 20px;
-    margin-right: 53px;
+    margin-right: 65px;
     z-index: 1100;
 }
 

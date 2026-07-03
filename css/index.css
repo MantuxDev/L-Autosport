@@ -122,6 +122,11 @@
     transform: scale(1.05);
 }
 
+.buttons a i{
+    font-size: 20px;
+    margin-right: 10px;
+}
+
 @media (max-width: 768px){
     .hero-content h1{
         font-size: 50px;
